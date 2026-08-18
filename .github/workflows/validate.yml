@@ -1,0 +1,33 @@
+name: validate
+
+# 只在 plugins.json 或校验器本身变动时跑：这个仓库的其他改动（README、文档）
+# 不影响索引正确性，没必要占额度。
+on:
+  pull_request:
+    paths:
+      - "plugins.json"
+      - "schema.json"
+      - "scripts/**"
+      - ".github/workflows/validate.yml"
+  push:
+    branches: [main]
+    paths:
+      - "plugins.json"
+      - "schema.json"
+      - "scripts/**"
+      - ".github/workflows/validate.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # 联网档会去每个插件仓库拉 manifest，校验 id 与索引一致
+      - name: 校验索引
+        run: node scripts/validate.mjs --online

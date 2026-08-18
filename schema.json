@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/VangelisHaha/yinian-plugins/blob/main/schema.json",
+  "title": "一念插件索引",
+  "description": "本仓库 plugins.json 的字段契约。刻意保持最小：会随插件发版变化的信息（版本、宿主兼容区间、下载地址、校验和）一律从插件自己的仓库现取，不在索引里留副本。",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "name", "author", "description", "repo"],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9-]{1,62}$",
+        "description": "插件唯一标识，必须与插件仓库根目录 yinian-plugin.json 里的 id 完全一致。会成为本机安装目录名。"
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "description": "市场列表里的显示名。"
+      },
+      "author": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64
+      },
+      "description": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200,
+        "description": "一句话说明它做什么。列表里只显示这一句，写清楚「从哪同步什么」比形容词有用。"
+      },
+      "repo": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$",
+        "description": "GitHub 的 owner/name。一念按它拉 manifest、README 与 Release 资产。"
+      },
+      "contributes": {
+        "type": "array",
+        "uniqueItems": true,
+        "description": "声明的扩展点简写，只用于市场列表的能力标签与筛选。索引里留一份是为了让列表页不必逐个拉 manifest（N 个插件 N 次请求）；权威值仍在插件 manifest 的 contributes，两者不一致时以 manifest 为准。",
+        "items": {
+          "type": "string",
+          "enum": ["sync:task", "sync:event", "notify", "hooks"]
+        }
+      },
+      "homepage": {
+        "type": "string",
+        "pattern": "^https?://",
+        "description": "可选。缺省时一念用 https://github.com/<repo>。"
+      }
+    }
+  }
+}
