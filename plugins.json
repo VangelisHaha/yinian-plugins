@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "id": "yinian-feishu",
+    "name": "飞书任务",
+    "author": "vangelis",
+    "description": "把飞书「我的任务」同步进一念，完成与重开双向回写",
+    "repo": "VangelisHaha/yinian-plugin-feishu",
+    "contributes": ["sync:task"]
+  }
+]
