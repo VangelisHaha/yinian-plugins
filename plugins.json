@@ -14,5 +14,13 @@
     "description": "把飞书项目（Meegle）的排期同步进一念：工作项成任务，每个排期节点成一个排期块",
     "repo": "VangelisHaha/yinian-plugin-feishu-project",
     "contributes": ["sync:task"]
+  },
+  {
+    "id": "yinian-hk-ipo",
+    "name": "港股新股",
+    "author": "vangelis",
+    "description": "把港股新股的认购截止、公布结果、暗盘与上市四个时点同步成一念的日历事件",
+    "repo": "VangelisHaha/yinian-plugin-hk-ipo",
+    "contributes": ["sync:event"]
   }
 ]
