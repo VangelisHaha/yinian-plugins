@@ -6,5 +6,13 @@
     "description": "把飞书「我的任务」同步进一念，完成与重开双向回写",
     "repo": "VangelisHaha/yinian-plugin-feishu",
     "contributes": ["sync:task"]
+  },
+  {
+    "id": "yinian-feishu-project",
+    "name": "飞书项目",
+    "author": "vangelis",
+    "description": "把飞书项目（Meegle）的排期同步进一念：工作项成任务，每个排期节点成一个排期块",
+    "repo": "VangelisHaha/yinian-plugin-feishu-project",
+    "contributes": ["sync:task"]
   }
 ]
