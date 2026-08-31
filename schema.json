@@ -7,7 +7,13 @@
   "items": {
     "type": "object",
     "additionalProperties": false,
-    "required": ["id", "name", "author", "description", "repo"],
+    "required": [
+      "id",
+      "name",
+      "author",
+      "description",
+      "repo"
+    ],
     "properties": {
       "id": {
         "type": "string",
@@ -42,7 +48,14 @@
         "description": "声明的扩展点简写，只用于市场列表的能力标签与筛选。索引里留一份是为了让列表页不必逐个拉 manifest（N 个插件 N 次请求）；权威值仍在插件 manifest 的 contributes，两者不一致时以 manifest 为准。",
         "items": {
           "type": "string",
-          "enum": ["sync:task", "sync:event", "notify", "hooks"]
+          "enum": [
+            "sync:task",
+            "sync:event",
+            "notify",
+            "hooks",
+            "replica",
+            "dayMarks"
+          ]
         }
       },
       "homepage": {

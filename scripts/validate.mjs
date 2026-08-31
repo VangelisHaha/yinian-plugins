@@ -25,7 +25,17 @@ const INDEX_PATH = join(ROOT, "plugins.json");
 /** 与 schema.json 保持一致，改这里必须同步改 schema。 */
 const ID_PATTERN = /^[a-z0-9][a-z0-9-]{1,62}$/;
 const REPO_PATTERN = /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/;
-const CONTRIBUTES = new Set(["sync:task", "sync:event", "notify", "hooks"]);
+// 与 schema.json 的 contributes 枚举保持一致。只是市场列表的能力标签，
+// 权威值在插件 manifest；两处不一致时以 manifest 为准。
+// `replica` 是多端同步的传输后端（一念 docs/11 §5.4），与 sync:* 互斥。
+const CONTRIBUTES = new Set([
+  "sync:task",
+  "sync:event",
+  "replica",
+  "notify",
+  "dayMarks",
+  "hooks",
+]);
 const REQUIRED = ["id", "name", "author", "description", "repo"];
 const OPTIONAL = ["contributes", "homepage"];
 const MAX_LENGTHS = { name: 64, author: 64, description: 200 };
