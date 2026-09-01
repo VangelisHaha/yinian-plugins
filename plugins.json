@@ -32,7 +32,7 @@
     ]
   },
   {
-    "id": "yinian-plugin-couchdb",
+    "id": "yinian-couchdb",
     "name": "自建 CouchDB 同步",
     "author": "vangelis",
     "description": "多端同步的传输后端：把一念加密后的字节搬到你自己的 CouchDB。只搬字节，看不懂内容",
