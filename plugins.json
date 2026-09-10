@@ -32,6 +32,16 @@
     ]
   },
   {
+    "id": "yinian-folder",
+    "name": "文件夹同步（iCloud / Dropbox）",
+    "author": "vangelis",
+    "description": "多端同步的传输后端：写进一个本地目录，由 iCloud Drive / Dropbox / OneDrive 客户端搬到其他设备。不需要服务器",
+    "repo": "VangelisHaha/yinian-plugin-folder",
+    "contributes": [
+      "replica"
+    ]
+  },
+  {
     "id": "yinian-mail",
     "name": "邮箱",
     "author": "vangelis",
@@ -48,6 +58,16 @@
     "author": "vangelis",
     "description": "多端同步的传输后端：把一念加密后的字节搬到你自己的 CouchDB。只搬字节，看不懂内容",
     "repo": "VangelisHaha/yinian-plugin-couchdb",
+    "contributes": [
+      "replica"
+    ]
+  },
+  {
+    "id": "yinian-webdav",
+    "name": "WebDAV 同步（坚果云 / Nextcloud）",
+    "author": "vangelis",
+    "description": "多端同步的传输后端：把一念加密后的字节搬到任意 WebDAV（坚果云 / Nextcloud / 群晖）。轮询，只搬字节",
+    "repo": "VangelisHaha/yinian-plugin-webdav",
     "contributes": [
       "replica"
     ]
