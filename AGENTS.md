@@ -1,6 +1,6 @@
 # AGENTS.md — yinian-plugins
 
-[一念（Yinian）](https://github.com/VangelisHaha/nikou-agenda)的**插件索引仓库**。只有一份 `plugins.json` 和它的校验器，没有业务代码。
+[安时（Nuncta）](https://github.com/VangelisHaha/nikou-agenda)的**插件索引仓库**。只有一份 `plugins.json` 和它的校验器，没有业务代码。
 
 ## 必须遵守
 

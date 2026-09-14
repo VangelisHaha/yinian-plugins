@@ -1,12 +1,12 @@
 # yinian-plugins
 
-[一念（Yinian）](https://github.com/VangelisHaha/nikou-agenda)的插件索引。
+[安时（Nuncta）](https://github.com/VangelisHaha/nikou-agenda)的插件索引。
 
-一念应用里的「插件市场」读的就是本仓库的 [`plugins.json`](plugins.json)。**这个仓库只存索引，不存插件代码**——每个插件住在自己的仓库里，通过 GitHub Release 分发 zip。
+安时应用里的「插件市场」读的就是本仓库的 [`plugins.json`](plugins.json)。**这个仓库只存索引，不存插件代码**——每个插件住在自己的仓库里，通过 GitHub Release 分发 zip。
 
 ## 为什么索引这么小
 
-`plugins.json` 只有 id、名字、作者、一句话说明、仓库地址和能力标签。会随发版变化的东西——版本号、宿主兼容区间、下载地址、校验和——**一概不在这里**，一念在展示详情和安装时直接从插件仓库现取。
+`plugins.json` 只有 id、名字、作者、一句话说明、仓库地址和能力标签。会随发版变化的东西——版本号、宿主兼容区间、下载地址、校验和——**一概不在这里**，安时在展示详情和安装时直接从插件仓库现取。
 
 理由很简单：任何写进索引的版本信息，都意味着插件作者每次发版都要回来改这个仓库，而忘了改就是「市场里显示的版本和实际装到的不一样」。索引里没有的东西不会过期。
 
@@ -21,7 +21,7 @@
   "id": "yinian-feishu",
   "name": "飞书任务",
   "author": "vangelis",
-  "description": "把飞书任务同步进一念，完成状态双向回写",
+  "description": "把飞书任务同步进安时，完成状态双向回写",
   "repo": "VangelisHaha/yinian-plugin-feishu",
   "contributes": ["sync:task", "hooks"]
 }
@@ -52,7 +52,7 @@ node scripts/validate.mjs --online   # 联网：去你的仓库拉 manifest 核�
 
 ## 安全须知
 
-插件是**用户态子进程，拿到的是你的完整用户权限**。一念在安装前会把 manifest 声明的权限原样摊给用户看，但收录进本索引**不代表代码经过安全审计**。
+插件是**用户态子进程，拿到的是你的完整用户权限**。安时在安装前会把 manifest 声明的权限原样摊给用户看，但收录进本索引**不代表代码经过安全审计**。
 
 收录的判断标准只有三条：manifest 合法、仓库公开可读、说明与实际行为一致。装之前请自己看代码。
 

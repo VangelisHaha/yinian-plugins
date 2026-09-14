@@ -3,7 +3,7 @@
     "id": "yinian-feishu",
     "name": "飞书",
     "author": "vangelis",
-    "description": "飞书任务双向同步、日历与会议同步进日程，并把一念的提醒发到飞书",
+    "description": "飞书任务双向同步、日历与会议同步进日程，并把安时的提醒发到飞书",
     "repo": "VangelisHaha/yinian-plugin-feishu",
     "contributes": [
       "sync:task",
@@ -15,7 +15,7 @@
     "id": "yinian-feishu-project",
     "name": "飞书项目",
     "author": "vangelis",
-    "description": "把飞书项目（Meegle）的排期与缺陷同步进一念：工作项成任务、每个排期节点成一个排期块，指派给你的缺陷单向同步成待办",
+    "description": "把飞书项目（Meegle）的排期与缺陷同步进安时：工作项成任务、每个排期节点成一个排期块，指派给你的缺陷单向同步成待办",
     "repo": "VangelisHaha/yinian-plugin-feishu-project",
     "contributes": [
       "sync:task"
@@ -25,7 +25,7 @@
     "id": "yinian-hk-ipo",
     "name": "港股新股",
     "author": "vangelis",
-    "description": "把港股新股的认购截止、公布结果、暗盘与上市四个时点同步成一念的日历事件",
+    "description": "把港股新股的认购截止、公布结果、暗盘与上市四个时点同步成安时的日历事件",
     "repo": "VangelisHaha/yinian-plugin-hk-ipo",
     "contributes": [
       "sync:event"
@@ -56,7 +56,7 @@
     "id": "yinian-couchdb",
     "name": "自建 CouchDB 同步",
     "author": "vangelis",
-    "description": "多端同步的传输后端：把一念加密后的字节搬到你自己的 CouchDB。只搬字节，看不懂内容",
+    "description": "多端同步的传输后端：把安时加密后的字节搬到你自己的 CouchDB。只搬字节，看不懂内容",
     "repo": "VangelisHaha/yinian-plugin-couchdb",
     "contributes": [
       "replica"
@@ -66,7 +66,7 @@
     "id": "yinian-webdav",
     "name": "WebDAV 同步（坚果云 / Nextcloud）",
     "author": "vangelis",
-    "description": "多端同步的传输后端：把一念加密后的字节搬到任意 WebDAV（坚果云 / Nextcloud / 群晖）。轮询，只搬字节",
+    "description": "多端同步的传输后端：把安时加密后的字节搬到任意 WebDAV（坚果云 / Nextcloud / 群晖）。轮询，只搬字节",
     "repo": "VangelisHaha/yinian-plugin-webdav",
     "contributes": [
       "replica"

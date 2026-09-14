@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/VangelisHaha/yinian-plugins/blob/main/schema.json",
-  "title": "一念插件索引",
+  "title": "安时插件索引",
   "description": "本仓库 plugins.json 的字段契约。刻意保持最小：会随插件发版变化的信息（版本、宿主兼容区间、下载地址、校验和）一律从插件自己的仓库现取，不在索引里留副本。",
   "type": "array",
   "items": {
@@ -40,7 +40,7 @@
       "repo": {
         "type": "string",
         "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$",
-        "description": "GitHub 的 owner/name。一念按它拉 manifest、README 与 Release 资产。"
+        "description": "GitHub 的 owner/name。安时按它拉 manifest、README 与 Release 资产。"
       },
       "contributes": {
         "type": "array",
@@ -61,7 +61,7 @@
       "homepage": {
         "type": "string",
         "pattern": "^https?://",
-        "description": "可选。缺省时一念用 https://github.com/<repo>。"
+        "description": "可选。缺省则安时会用 https://github.com/<repo>。"
       }
     }
   }
